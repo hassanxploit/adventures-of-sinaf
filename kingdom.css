@@ -1,0 +1,160 @@
+/* Custom header vibe for the Kingdom page */
+.kingdom-header {
+  background: linear-gradient(180deg, #1c0f13 0%, #0c0e13 100%);
+  border-bottom: 2px solid #8b1e24;
+}
+
+/* Map Board Styling */
+.map-section {
+  margin-bottom: 54px;
+}
+
+.map-intro {
+  text-align: center;
+  color: #a89f91;
+  font-style: italic;
+  margin-top: -14px;
+  margin-bottom: 24px;
+}
+
+.map-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  background-color: #12151d;
+  border: 2px dashed #6b5627; /* Gives it an old cartographer map border */
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.65);
+}
+
+.region {
+  background-color: #181c26;
+  border: 1px solid #382f1e;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.region:hover {
+  transform: translateY(-4px);
+  border-color: #c9a227;
+  box-shadow: 0 8px 20px rgba(201, 162, 39, 0.15);
+}
+
+.coords {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: #c9a227;
+  margin-bottom: 6px;
+}
+
+.region h3 {
+  font-size: 1.15rem;
+  color: #f5e6c8;
+  margin-bottom: 10px;
+}
+
+.region p {
+  font-size: 0.94rem;
+  color: #cfc8bc;
+  margin-bottom: 14px;
+}
+
+.danger {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.danger.low {
+  background-color: rgba(47, 133, 90, 0.2);
+  color: #68d391;
+  border: 1px solid #2f855a;
+}
+
+.danger.med {
+  background-color: rgba(201, 162, 39, 0.18);
+  color: #f0c94d;
+  border: 1px solid #97781c;
+}
+
+.danger.high {
+  background-color: rgba(155, 44, 44, 0.25);
+  color: #fc8181;
+  border: 1px solid #9b2c2c;
+}
+
+/* Allies & Rivals Grids */
+.faction-section {
+  margin-bottom: 50px;
+}
+
+.ally-heading {
+  color: #68d391;
+}
+
+.rival-heading {
+  color: #fc8181;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.lore-card {
+  background-color: #141720;
+  border-radius: 8px;
+  padding: 22px;
+  border: 1px solid #262936;
+  transition: transform 0.2s ease;
+}
+
+.lore-card:hover {
+  transform: translateY(-3px);
+}
+
+.ally-card {
+  border-top: 3px solid #38a169;
+}
+
+.rival-card {
+  border-top: 3px solid #c53030;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 9px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.ally-badge {
+  background-color: rgba(56, 161, 105, 0.18);
+  color: #68d391;
+}
+
+.rival-badge {
+  background-color: rgba(197, 48, 48, 0.2);
+  color: #fc8181;
+}
+
+.lore-card h3 {
+  font-size: 1.2rem;
+  color: #f5e6c8;
+  margin-bottom: 10px;
+}
+
+.lore-card p {
+  font-size: 0.94rem;
+  color: #d8d1c5;
+}
