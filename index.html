@@ -123,20 +123,72 @@
     </section>
 
     <!-- About / Footer Lore Box -->
+    <!-- Interactive Swear Fealty & Aura Boost Box -->
     <section class="about" id="fealty">
       <h3>Swear Fealty to House Sinaf</h3>
       <p>
         These sacred archives are maintained by the Royal Scribe (his cousin) so future generations never 
-        forget the absolute nonsense and legendary victories of the Bengere Kingdom. Have a new Sinaf sighting 
-        or embarrassing war story? Send a raven immediately.
+        forget the absolute nonsense and legendary victories of the Bengere Kingdom.
+      </p>
+
+      <div class="fealty-tracker">
+        <span class="aura-label">Current Royal Aura:</span>
+        <span id="aura-score" class="aura-number">9,999</span>
+      </div>
+
+      <div class="btn-group">
+        <button id="fealty-btn" class="royal-btn">&#9876; Swear Fealty (+100 Aura)</button>
+        <button id="prophecy-btn" class="royal-btn secondary-btn">&#128220; Bengere Prophecy</button>
+      </div>
+
+      <p id="royal-message" class="royal-message">
+        Kneel before the throne to boost Lord Sinaf's aura.
       </p>
     </section>
-
   </main>
 
   <footer>
     <p>&copy; 2026 House Sinaf of the Bengere Kingdom. All Aura Reserved.</p>
   </footer>
 
+  <script>
+    let aura = 9999;
+    let clicks = 0;
+
+    const auraScore = document.getElementById("aura-score");
+    const royalMessage = document.getElementById("royal-message");
+    const fealtyBtn = document.getElementById("fealty-btn");
+    const prophecyBtn = document.getElementById("prophecy-btn");
+
+    const fealtyReplies = [
+      "You bent the knee. Sinaf gave a slight head nod without looking up from his phone.",
+      "Respect +100. You are now an Official Bannerman of the Bengere Kingdom.",
+      "Lord Sinaf's aura is getting dangerous. Three alarm clocks just stopped working.",
+      "The Royal Council approves. You may now guard the leftover biryani.",
+      "MAXIMUM AURA REACHED. Even dragons are asking Sinaf for outfit advice."
+    ];
+
+    const prophecies = [
+      "Prophecy: Sinaf will say 'I am 5 minutes away' while still wrapped in a towel.",
+      "Prophecy: Whoever leaves snacks in the kitchen after midnight shall lose them to the Heir of Bengere.",
+      "Prophecy: Tomorrow is definitely the day Sinaf starts going to the gym. Probably.",
+      "Prophecy: A fierce argument approaches, and Sinaf will win it using pure confidence and zero facts.",
+      "Prophecy: Beware the cursed 7:00 AM bell—it stands no chance against the Royal Snooze."
+    ];
+
+    fealtyBtn.addEventListener("click", () => {
+      aura += 100;
+      clicks += 1;
+      auraScore.textContent = aura.toLocaleString();
+
+      const replyIndex = Math.min(clicks - 1, fealtyReplies.length - 1);
+      royalMessage.textContent = fealtyReplies[replyIndex];
+    });
+
+    prophecyBtn.addEventListener("click", () => {
+      const randomIndex = Math.floor(Math.random() * prophecies.length);
+      royalMessage.textContent = prophecies[randomIndex];
+    });
+  </script>
 </body>
 </html>
