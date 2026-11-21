@@ -245,3 +245,76 @@ footer {
     height: 320px;
   }
 }
+
+/* Interactive Fealty & Prophecy Buttons */
+.fealty-tracker {
+  margin: 20px 0 18px;
+  padding: 12px;
+  background-color: #0c0e13;
+  border: 1px solid #3d3320;
+  border-radius: 6px;
+}
+
+.aura-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a89f91;
+  margin-right: 8px;
+}
+
+.aura-number {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #f0c94d;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.royal-btn {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 1px solid #c9a227;
+  background-color: #8b1e24;
+  color: #f5e6c8;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.royal-btn:hover {
+  background-color: #a8242b;
+  box-shadow: 0 0 16px rgba(201, 162, 39, 0.35);
+  transform: translateY(-2px);
+}
+
+.royal-btn:active {
+  transform: scale(0.97);
+}
+
+.secondary-btn {
+  background-color: #1c2230;
+  color: #f0c94d;
+}
+
+.secondary-btn:hover {
+  background-color: #273044;
+}
+
+.royal-message {
+  font-style: italic;
+  color: #f5e6c8;
+  min-height: 28px;
+  margin-top: 6px;
+}
